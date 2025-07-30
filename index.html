@@ -19,12 +19,20 @@
  <div class="quote" >Tap Anywhere to Start Music 🎵 </div>
 
   <audio id="bg-music" loop>
-    <source src="./mp3/slowed.mp3" type="audio/mpeg">
+    <source src="/mp3/slowed.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
 
   <script>
     // iOS Safari'de çalışması için kullanıcı etkileşimini bekliyoruz
+    const card = document.querySelector('.card');
+
+// Animasyonu durdurmak için
+card.style.setProperty('--rotate', '0deg');
+
+// Animasyonu tekrar başlatmak için örn:
+card.style.removeProperty('--rotate');
+
     function enableAudio() {
       const audio = document.getElementById('bg-music');
       audio.play().catch((e) => {
