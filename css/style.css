@@ -7,6 +7,7 @@
   padding: 20px;
 }
 
+
 @media (max-width: 500px) {
   .grid-container {
     grid-template-columns: 1fr;
@@ -30,7 +31,7 @@
   }
 
   :root {
-    --card-height: 45vh;
+    --card-height: 40vh;
     --card-width: calc(var(--card-height) / 1);
   }
 }
@@ -134,4 +135,13 @@ a {
   font-family: sans-serif;
   font-weight: bold;
   margin-top: 2rem;
+}
+
+
+.row{
+  
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction: column !important;
 }
